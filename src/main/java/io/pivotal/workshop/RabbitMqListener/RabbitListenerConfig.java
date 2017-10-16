@@ -5,6 +5,7 @@ import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFacto
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitListenerConfig {
 
     private ConnectionFactory connectionFactory;
+
+    @Value("${queue_name}")
+    private String routingKey;
 
     @Autowired
     public RabbitListenerConfig(ConnectionFactory connectionFactory){
@@ -28,6 +32,6 @@ public class RabbitListenerConfig {
 
     @Bean
     public Queue queue(){
-        return new Queue("spring-boot", false);
+        return new Queue(routingKey, false);
     }
 }

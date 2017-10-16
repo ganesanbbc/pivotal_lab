@@ -1,6 +1,7 @@
 #custom:
 message: updated @12:04
 
+
 person:
   greeting: Hello,
   farewell: Goodbye,
@@ -28,3 +29,5 @@ spring:
   url: jdbc:mysql://localhost:3306/testdb?useSSL=false
   username: springboot
   password: workshop
+
+queue_name: spring-mq-sample
