@@ -9,6 +9,19 @@ management:
   security:
     enabled: false
 
+security:
+#  user:
+#    password: password
+  oauth2:
+    client:
+      clientId: 70a9c16f-238c-47a2-8e3f-276e29b311dc
+      secret: cfd6d83b-f3d9-4d73-aad9-bfe74ce8afc2
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token
+
+server:
+  port: 8081
+
 spring:
  datasource:
   driver-class-name: com.mysql.jdbc.Driver
