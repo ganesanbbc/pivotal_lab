@@ -1,0 +1,6 @@
+#custom:
+message: from production @12:12gr
+
+person:
+  greeting: Hello,
+  farewell: Goodbye,

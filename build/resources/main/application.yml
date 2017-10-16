@@ -1,0 +1,17 @@
+#custom:
+message: updated @12:04
+
+person:
+  greeting: Hello,
+  farewell: Goodbye,
+
+management:
+  security:
+    enabled: false
+
+spring:
+ datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/testdb?useSSL=false
+  username: springboot
+  password: workshop
