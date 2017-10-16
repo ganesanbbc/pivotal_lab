@@ -5,9 +5,9 @@ person:
   greeting: Hello,
   farewell: Goodbye,
 
-#management:
-#  security:
-#    enabled: false
+management:
+  security:
+    enabled: false
 
 security:
 #  user:
