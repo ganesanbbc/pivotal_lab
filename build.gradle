@@ -17,13 +17,24 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-freemarker")
     compile ("org.springframework.boot:spring-boot-starter-actuator")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    // REST CONTAINS THE STARTER WEB - SO COMMENT THE FOLLOWING LINE
+//    compile("org.springframework.boot:spring-boot-starter-web")
+
+    // JPA CONTAINS THE JDBC STARTER - COMMENT THE FOLLOWING ITEM
+//    compile("org.springframework.boot:spring-boot-starter-jdbc")
     compile("org.springframework.boot:spring-boot-devtools")
+    //ENABLE RABBIT MQ
     compile "org.springframework.boot:spring-boot-starter-amqp"
+
+    //ENABLE JPA
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "org.springframework.boot:spring-boot-starter-data-rest"
+
 //    compile "org.springframework.boot:spring-boot-starter-security"
 //    compile "org.springframework.security.oauth:spring-security-oauth2"
 
+    runtime "com.h2database:h2"
+    runtime "mysql:mysql-connector-java"
 
     testCompile "org.springframework.boot:spring-boot-starter-test"
 
