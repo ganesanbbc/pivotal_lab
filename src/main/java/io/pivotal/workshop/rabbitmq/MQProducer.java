@@ -1,12 +1,9 @@
-package io.pivotal.workshop.RabbitMqListener;
+package io.pivotal.workshop.rabbitmq;
 
-import io.pivotal.workshop.sinnpet.model.SnippetInfo;
 import io.pivotal.workshop.sinnpet.model.SnippetRecord;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 

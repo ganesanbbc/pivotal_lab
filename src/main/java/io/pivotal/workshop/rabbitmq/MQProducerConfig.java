@@ -1,4 +1,4 @@
-package io.pivotal.workshop.RabbitMqListener;
+package io.pivotal.workshop.rabbitmq;
 
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

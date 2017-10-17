@@ -1,4 +1,4 @@
-package io.pivotal.workshop.RabbitMqListener;
+package io.pivotal.workshop.rabbitmq;
 
 import io.pivotal.workshop.sinnpet.model.SnippetRecord;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
