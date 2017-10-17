@@ -38,3 +38,10 @@ endpoint:
   shutdown:
     enabled: true
   id: mappings
+
+# Directory Service
+directory:
+  url: http://localhost:8080/directories/${company.id}
+
+# Company
+company.id: 1
