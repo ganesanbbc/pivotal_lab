@@ -24,7 +24,7 @@ public class MQProducer {
     public void sendMessage() {
         String timestamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String message = "Hello world! " + timestamp;
-        this.template.convertAndSend(new SnippetRecord("Java::"+message,"java1.8"));
+//        this.template.convertAndSend(new SnippetRecord("Java::"+message,"java1.8"));
 //        this.template.convertAndSend(routingKey, message);
     }
 

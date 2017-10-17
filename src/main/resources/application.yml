@@ -6,9 +6,9 @@ person:
   greeting: Hello,
   farewell: Goodbye,
 
-management:
-  security:
-    enabled: false
+#management:
+#  security:
+#    enabled: false
 
 security:
 #  user:
@@ -31,3 +31,10 @@ spring:
   password: workshop
 
 queue_name: spring-mq-sample
+
+endpoint:
+  beans:
+    sensitive: true
+  shutdown:
+    enabled: true
+  id: mappings
