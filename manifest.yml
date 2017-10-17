@@ -1,0 +1,10 @@
+applications:
+- name: directory-client
+  disk_quota: 1G
+  instances: 1
+  memory: 512M
+  routes:
+  - route: directory-client-malapropos-catechumenism.apps.cumuluslabs.io
+  services:
+  - attendee-mysql
+  stack: cflinuxfs2

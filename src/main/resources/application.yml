@@ -41,7 +41,7 @@ endpoint:
 
 # Directory Service
 directory:
-  url: http://localhost:8080/directories/${company.id}
+  url: http://directory-service-v1-circumfluent-pneumatology.apps.cumuluslabs.io/directories/${company.id}
 
 # Company
-company.id: 1
+company.id: 4
