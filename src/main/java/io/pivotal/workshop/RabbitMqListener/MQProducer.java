@@ -1,5 +1,7 @@
 package io.pivotal.workshop.RabbitMqListener;
 
+import io.pivotal.workshop.sinnpet.model.SnippetInfo;
+import io.pivotal.workshop.sinnpet.model.SnippetRecord;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,8 @@ public class MQProducer {
     public void sendMessage() {
         String timestamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String message = "Hello world! " + timestamp;
-
-        this.template.convertAndSend(routingKey, message);
+        this.template.convertAndSend(new SnippetRecord("Java::"+message,"java1.8"));
+//        this.template.convertAndSend(routingKey, message);
     }
 
 

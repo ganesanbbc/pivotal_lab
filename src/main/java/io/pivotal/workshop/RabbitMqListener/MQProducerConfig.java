@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RabbitConfig {
+public class MQProducerConfig {
 
     private final ConnectionFactory connectionFactory;
 
@@ -21,7 +21,7 @@ public class RabbitConfig {
     private String routingKey;
 
     @Autowired
-    public RabbitConfig(ConnectionFactory connectionFactory){
+    public MQProducerConfig(ConnectionFactory connectionFactory){
         this.connectionFactory = connectionFactory;
     }
 

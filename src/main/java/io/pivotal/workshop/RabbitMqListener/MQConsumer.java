@@ -1,5 +1,6 @@
 package io.pivotal.workshop.RabbitMqListener;
 
+import io.pivotal.workshop.sinnpet.model.SnippetRecord;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,8 @@ public class MQConsumer {
     private String routingKey;
 
     @RabbitListener(queues = "spring-mq-sample")
-    public void process(String message) {
+    public void process(SnippetRecord message) {
+
         System.out.println(">>> " + message);
     }
 }

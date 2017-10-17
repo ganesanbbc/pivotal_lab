@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RabbitListenerConfig {
+public class MQConsumerConfig {
 
     private ConnectionFactory connectionFactory;
 
@@ -18,7 +18,7 @@ public class RabbitListenerConfig {
     private String routingKey;
 
     @Autowired
-    public RabbitListenerConfig(ConnectionFactory connectionFactory){
+    public MQConsumerConfig(ConnectionFactory connectionFactory){
         this.connectionFactory = connectionFactory;
     }
 
